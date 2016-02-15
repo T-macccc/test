@@ -1,0 +1,2 @@
+platform :ios,'9.2'
+pod 'Mixpanel', '~> 2.9.1'
