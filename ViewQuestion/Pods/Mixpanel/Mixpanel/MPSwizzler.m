@@ -37,7 +37,7 @@ static void mp_swizzledMethod_2(id self, SEL _cmd)//self表当前对象,_cmd表�
     Method aMethod = class_getInstanceMethod([self class], _cmd);
     MPSwizzle *swizzle = (MPSwizzle *)[swizzles objectForKey:MAPTABLE_ID(aMethod)];//获得对应 swizzle = swizzles[@"aMethod"]的value
     if (swizzle) {
-       //函数指针,originalMethod?
+       //函数指针,originalMethod
 
         NSEnumerator *blocks = [swizzle.blocks objectEnumerator];//blocks为swizzle.blocks的枚举器对象
         swizzleBlock block;
